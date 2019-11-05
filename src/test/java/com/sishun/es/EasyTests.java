@@ -111,6 +111,29 @@ public class EasyTests extends SpringDataElasticsearchApplicationTests {
     }
 
     /**
+     * 不分页term查询name="kevin yu"。
+     * 期待结果：【】。
+     */
+    @Test
+    public void testTermQuerySearch2() {
+        SearchQuery searchQuery = new NativeSearchQueryBuilder()
+                .withQuery(QueryBuilders.termQuery("name", "kevin yu")).build();
+        System.out.println(studentService.search(searchQuery));
+    }
+
+    /**
+     * 不分页match查询name="kevin yu"。
+     * 期待结果：name=kevin和name=kevin yu。
+     */
+    @Test
+    public void testMatchQuerySearch2() {
+        SearchQuery searchQuery = new NativeSearchQueryBuilder()
+                .withQuery(QueryBuilders.matchQuery("name", "kevin yu")).build();
+        System.out.println(studentService.search(searchQuery));
+    }
+
+
+    /**
      * 不分页term查询name.keyword字段（不分词）name="kevin yu"
      * 期待结果：name=kevin yu
      */
