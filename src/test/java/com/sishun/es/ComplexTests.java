@@ -29,7 +29,7 @@ import java.util.Map;
 /**
  * 复杂搜索测试类
  */
-public class ComplexTests extends SpringDataElasticsearchApplicationTests{
+public class ComplexTests{
 
     @Autowired
     private ElasticsearchTemplate elasticsearchTemplate;
@@ -229,6 +229,7 @@ public class ComplexTests extends SpringDataElasticsearchApplicationTests{
 
     /**
      * 通过范围进行深分页全量查询
+     *
      */
     @Test
     public void testRangeDeepPageMatchQuery() {

@@ -1,4 +1,4 @@
-package com.sishun.es.easy.repository;
+package com.sishun.es.easy.domain;
 
 import lombok.Getter;
 import lombok.Setter;

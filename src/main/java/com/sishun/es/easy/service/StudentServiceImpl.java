@@ -1,7 +1,7 @@
 package com.sishun.es.easy.service;
 
-import com.sishun.es.easy.dao.StudentRepository;
-import com.sishun.es.easy.repository.StudentPO;
+import com.sishun.es.easy.repository.StudentRepository;
+import com.sishun.es.easy.domain.StudentPO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.elasticsearch.core.query.SearchQuery;

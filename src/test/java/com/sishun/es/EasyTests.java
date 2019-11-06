@@ -1,6 +1,6 @@
 package com.sishun.es;
 
-import com.sishun.es.easy.repository.StudentPO;
+import com.sishun.es.easy.domain.StudentPO;
 import com.sishun.es.easy.service.StudentService;
 import com.google.common.collect.Lists;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * 简单搜索测试类
  */
-public class EasyTests extends SpringDataElasticsearchApplicationTests {
+public class EasyTests extends SpringDataElasticsearchApplicationTests{
     @Autowired
     private ElasticsearchTemplate elasticsearchTemplate;
 
@@ -34,6 +34,10 @@ public class EasyTests extends SpringDataElasticsearchApplicationTests {
     public void createIndex() {
         elasticsearchTemplate.createIndex(StudentPO.class);
         elasticsearchTemplate.putMapping(StudentPO.class);
+    }
+
+    @Test
+    public void createIdex() {
     }
 
     /**
